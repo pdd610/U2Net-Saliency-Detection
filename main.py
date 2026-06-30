@@ -4,7 +4,6 @@ import numpy as np
 from model.u2net import U2NET
 import os
 
-# ====== 你的函数 ======
 def load_image(path):
     img = cv2.imread(path)
     img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
@@ -25,7 +24,6 @@ def preprocess(image):
     return image
 
 
-# ====== 主程序 ======
 device = torch.device("cpu")
 
 model = U2NET(3, 1)
